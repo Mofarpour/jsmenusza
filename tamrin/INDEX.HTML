@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      const menu = [
+        {
+          title: "home",
+          url: "http://google.com",
+          tooltip: "sample tooltip",
+        },
+        {
+          title: "contact us",
+          url: "https://yahoo.com",
+          tooltip: "sample tooltip",
+        },
+        {
+          title: "about us",
+          url: "https://apple.com",
+          tooltip: "sample tooltip",
+        },
+      ];
+      function header() {
+        let example = "";
+        for (let i = 0; i < menu.length; i++) {
+          example +=
+            "<a style='margin-right:30px' href=" +
+            menu[i].url +
+            " title='" +
+            menu[i].tooltip +
+            "' >" +
+            menu[i].title +
+            "</a>";
+        }
+        return example;
+      }
+      document.getElementById("demo").innerHTML = header();
+    </script>
+  </body>
+</html>
